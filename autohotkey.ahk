@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Run %A_ScriptDir%\Scripts\Startup.ahk
 
 ; use Reload only when editing
-^r::Reload
+; ^r::Reload
 
 /* === Modifiers ===
  #	Win (Windows logo key)
@@ -40,16 +40,33 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   SendInput %CurrentDateTime%
 Return
 
-::gq.::GraphQL
-::gc.::GraphCMS!
+:*:;gq::GraphQL
+:*:;gc::GraphCMS
+:*:;sk::SvelteKit
+:*:;ss10::https://ss10.dev
 
 ; === run programs ===
 
-!+0::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 2"
-!+1::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 4"
-!+2::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 1"
-!+3::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 2" https://www.deezer.com
-!+4::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 2" https://app.restream.io/channel
-!+5::Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 1" https://youtube.com
+!+0::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 2"
+!+1::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 4"
+!+2::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 1"
+!+3::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 2" https://www.deezer.com
+!+4::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 2" https://app.restream.io/channel
+!+5::Run, %A_ProgramFiles% (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory="Profile 1" https://youtube.com
+; !+6::Run, 
+; !+7::Run, 
+; !+8::Run, 
+; !+9::Run, 
 
+!Numpad0::Run, wt.exe
+!Numpad1::Run, %A_ProgramFiles%\obs-studio\bin\64bit\obs64.exe, %A_ProgramFiles%\obs-studio\bin\64bit\
+!Numpad2::Run, %A_ProgramFiles%\Shotcut\shotcut.exe
+!Numpad3::Run, %A_ProgramFiles%\ShurePlus MOTIV\ShurePlus MOTIV.exe
+; !Numpad4::Run, 
+; !Numpad5::Run, 
+; !Numpad6::Run, 
+; !Numpad7::Run, 
+; !Numpad8::Run, 
+; !Numpad9::Run, 
+!NumpadDot::Run, %A_ProgramFiles% (x86)\Loupedeck\Loupedeck2\configui2\LoupedeckConfig.exe
 
